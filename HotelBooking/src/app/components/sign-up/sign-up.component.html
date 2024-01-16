@@ -1,1 +1,29 @@
-<p>sign-up works!</p>
+<div class="bg">
+  <div class="container">
+    <div class="frame">   
+      <form  [formGroup]="signUpForm" class="form-signup" (ngSubmit)="submit()">
+        <label>Full name</label>
+        <input class="form-styling" type="text" formControlName="name"/>
+        <label>Pan</label>
+        <input class="form-styling" type="text" formControlName="pan"/>
+        <label>Email</label>
+        <input class="form-styling" type="email" formControlName="email"/>
+        <label>Mobile No</label>
+        <input class="form-styling" type="text" formControlName="mob"/>
+        <label>Gender</label>
+        <div class="gender-category">
+          <input type="radio" name="gender" formControlName="gender" value="male"><span class="label">Male</span>
+          <input type="radio" name="gender" formControlName="gender" value="female"><span class="label">Female</span>
+          <input type="radio" name="gender" formControlName="gender" value="other"><span class="label">Other</span>
+        </div>
+        <label>Password</label>
+        <input class="form-styling" type="text" formControlName="password"/>
+        <label>Confirm password</label>
+        <input class="form-styling" type="text" formControlName="confirmPass"/>
+        <input type="checkbox" formControlName="Tnc"/><span class="label">Tnc</span>
+        <button class="btn-signup">Sign Up</button>
+      </form>
+                  
+    </div>
+  </div>
+</div>

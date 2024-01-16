@@ -1,0 +1,31 @@
+#install vscode nodejs and angular 
+to initialise angular
+npm install -g @angular/cli
+for angular version-16
+npm install -g @angular/cli@16
+
+#create new angular project : ng new projectname
+#start = ng s -o
+create component : ng g c componentname
+create module : ng g m modulename
+make component inside module : ng g c modulename/componentname
+
+#create demo server
+npm install json-server -f or npm install -g json-server
+to watch server =>
+json-server --watch db.json
+
+if get error=>
+npm install --save-dev json-server
+create db.json manually inside the project
+npx json-server --watch db.json --port 3000
+
+install bootstrap
+inside angular.json file we have -styles in the style we have to add 
+"node_modules/bootstrap/dist/css/bootstrap.min.css"
+style.css =>  @import "~bootstrap-icons/font/bootstrap-icons.css"; or
+import "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+install angular Material
+ng add @angular/material
+and import each element independently

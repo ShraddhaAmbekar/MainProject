@@ -1,14 +1,24 @@
-body{
+.container {
+  width:500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.login{
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,14,154,1) 35%, rgba(0,212,255,1) 100%);
   font-family: 'Poppins', sans-serif;
-
+  height: 100vh;
+  width:100%;
+  position: absolute;
 }
 form{
   border-radius: 20px;
-  margin-top: 150px !important;
-  width: 24% !important;
-  background-color: white !important;
+  margin-top: 150px ;
+  max-width:400px;
+  background-color: white ;
   padding: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-primary{
@@ -27,10 +37,18 @@ form{
   border-bottom: 1px solid;
   border-radius: 4px 4px 0 0;
   }
+
 h4{
-  font-size: 2rem !important;
+  font-size: 2rem ;
   font-weight: 700;
 }  
+
 .form-label{
-  font-weight: 800 !important;
+  font-weight: 800 
+}
+
+.create{
+  font-size: 13px;
+  text-align: center;
+
 }

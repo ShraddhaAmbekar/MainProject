@@ -1,16 +1,22 @@
-<div class="container-fluid">
-  <form class="mx-auto">
+<div class="login">
+  <div class="box">
+    <form class="mx-auto" #loginForm="ngForm">
       <h4 class="text-center">Login</h4>
-      <div class="mb-3 mt-5">
-        <label for="exampleInputEmail1" class="form-label">User Name</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div class="mb-3 mt-4">
+        <label class="form-label">User Name</label>
+        <input type="text" class="form-control" ngModel name="userName" #userName="ngModel" required>
+        <span *ngIf="userName?.errors?.['required'] && userName.touched" class="error">Username is required</span>
       </div>
+
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-        <div id="emailHelp" class="form-text mt-3">Forget password ?</div>
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" ngModel #password="ngModel" ngModel name="password" required>
+        <span *ngIf="userName?.errors?.['required'] && password.touched" class="error">Password is required</span>
+        <div class="form-text mt-3">Forget password ?</div>
       </div>
-    
-      <button type="submit" class="btn btn-primary mt-5">Login</button>
+      
+      <button type="submit" (click)="submit(loginForm.value)" class="btn btn-primary mt-3 mb-4">Login</button>
+      <h5 class="create">Don't have account <strong routerLink="/signUp">Create account</strong></h5>
     </form>
+  </div>
 </div>

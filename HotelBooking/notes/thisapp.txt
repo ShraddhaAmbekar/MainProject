@@ -1,0 +1,16 @@
+install vscode angular nodejs
+make folder=> make project => name HotelBooking
+install bootstrap angular material
+start json server and create data base and watch server
+make globle components => landing page, signup, login
+create modules => admin owner user 
+make componet like landing page in each module like adminLanding page give paths to each component use lazyloading when required
+make three buttons on landing page to redirect on modules
+
+first start owner jurney
+make two buttons in owner signin and back 
+when click on back redirect to landing page and 
+when click on signin button redirect to login page 
+make login form using templatedriven or reactive forms for that need to import formmodule and reactiveformmodule in appmodule 
+
+
