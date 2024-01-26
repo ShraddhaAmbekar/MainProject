@@ -1,4 +1,22 @@
-<p>landing works!</p>
-<button routerLink="/admin/adminLanding">Admin</button>
-<button routerLink="/owner/ownerLanding">Owner</button>
-<button routerLink="/user/userLanding">User</button>
+
+  <nav>
+    <button routerLink="/admin/adminLanding" (click)="journey('admin')">Admin</button>
+    <button routerLink="/owner/ownerLanding" (click)="journey('owner')">Owner</button>
+    <button routerLink="/user/userLanding" (click)="journey('user')">User</button>
+  </nav>
+ 
+<section id="home" class="banner_wrapper p-0">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="slide-caption text-center">
+          <div>
+            <h1>Welcome to BookHeven</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, sit? Quos sapiente blanditiis et aperiam </p>
+          </div>  
+          <div>
+            <button class="signin-btn">Sign In</button>
+          </div> 
+      </div>
+    </div>
+  </div>
+</section>

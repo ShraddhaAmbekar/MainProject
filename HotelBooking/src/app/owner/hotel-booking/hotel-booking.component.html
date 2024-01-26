@@ -1,0 +1,129 @@
+<section class="h-80 bg-dark">
+  <div class="container py-5 h-80">
+    <div class="row d-flex justify-content-center align-items-center h-80">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <img
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWwlMjBib29raW5nfGVufDB8fDB8fHww"
+                alt="Sample photo"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; height:780px; width: 600px;" />
+            </div>
+            <div class="col-xl-6">
+              <div class="card-body p-md-5 text-black">
+                <h2 class="mb-5 text-uppercase">Hotel registration form</h2>
+                <form [formGroup]="hotelRagistrationForm">
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label">Owner name</label>
+                        <input type="text" class="form-control form-control-lg" formControlName="ownerName" />
+                        <small class="error"
+                          *ngIf="hotelRagistrationForm.get('ownerName')?.invalid && hotelRagistrationForm.get('ownerName')?.touched">Name
+                          is required</small>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label">Owner Mobile Number</label>
+                        <input type="text" class="form-control form-control-lg" formControlName="ownerMobile"
+                          maxlength="10" appNumberOnly />
+                        <small class="error"
+                          *ngIf="hotelRagistrationForm.get('ownerMobile')?.invalid && hotelRagistrationForm.get('ownerMobile')?.touched">Mobile
+                          Number is required</small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label">Hotel name</label>
+                        <input type="text" class="form-control form-control-lg" formControlName="hotelName" />
+                        <small class="error"
+                          *ngIf="hotelRagistrationForm.get('hotelName')?.invalid && hotelRagistrationForm.get('hotelName')?.touched">Hotel
+                          Name is required</small>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label">Hotel Mobile Number</label>
+                        <input type="text" class="form-control form-control-lg" formControlName="hotelMobile"
+                          appNumberOnly />
+                        <small class="error"
+                          *ngIf="hotelRagistrationForm.get('hotelMobile')?.invalid && hotelRagistrationForm.get('hotelMobile')?.touched">Contact
+                          Number is required</small>
+                      </div>
+                    </div>
+
+                    <div class="form-outline mb-3">
+                      <label class="form-label">Hotel Address</label>
+                      <input type="text" class="form-control form-control-lg" formControlName="hotelAdderss" />
+                      <small class="error"
+                        *ngIf="hotelRagistrationForm.get('hotelAdderss')?.invalid && hotelRagistrationForm.get('hotelAdderss')?.touched">Hotel
+                        Address is required</small>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-md-6 mb-4 mt-3">
+                      <label>State : </label>
+                      <select formControlName="state" class="select p-2 m-3"> 
+                        <option selected></option>
+                        <option *ngFor="let state of list" [ngValue]='state.id'>{{state.label}}</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-6 mb-4 mt-3">
+                      <label>City :</label>
+                      <select formControlName="city" class="select p-2 m-3">
+                        <option selected></option>
+                        <option *ngFor="let city of selectedStatesList" [value]='city.id'>{{city.label}}</option>
+                      </select>
+                    </div>
+                
+                  </div>
+
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label">Hotel Menu</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="hotelMenu" />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label">Types of Room Available</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="roomAvailable" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-outline">
+                <label class="form-label">Password</label>
+                <input type="text" class="form-control form-control-lg" formControlName="userPass" />
+                <small class="error"
+                  *ngIf="hotelRagistrationForm.get('userPass')?.invalid && hotelRagistrationForm.get('userPass')?.touched">Password
+                  is required</small>
+              </div>
+
+              <div class="d-flex justify-content-end pt-5">
+                <button type="button" class="btn btn-light btn-lg">Reset all</button>
+                <button type="button" class="btn btn-warning btn-lg ms-2"
+                  (click)="Submit(hotelRagistrationForm.value)">Submit form</button>
+              </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</section>

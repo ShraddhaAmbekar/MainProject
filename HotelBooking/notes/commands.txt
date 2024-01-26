@@ -20,7 +20,7 @@ npm install --save-dev json-server
 create db.json manually inside the project
 npx json-server --watch db.json --port 3000
 
-install bootstrap
+install bootstrap npm install bootstrap and npm install bootstrap-icons
 inside angular.json file we have -styles in the style we have to add 
 "node_modules/bootstrap/dist/css/bootstrap.min.css"
 style.css =>  @import "~bootstrap-icons/font/bootstrap-icons.css"; or

@@ -1,7 +1,161 @@
-{  
- "admin" : [], 
- "owner " : [], 
- "user" : [], 
- "hotelDetails":[], 
- "hotelBooking":[] 
- } 
+{
+  "admin": [
+    {
+      "id": "4397",
+      "name": "Shraddha Ambekar",
+      "pan": "DFEDD5453S",
+      "email": "shraddha21@gmail.com",
+      "mob": "5645354667",
+      "gender": "female",
+      "password": "shraddha",
+      "confirmPass": "shraddha"
+    },
+    {
+      "id": "1777",
+      "name": "Akanksha",
+      "pan": "FGDFS5454F",
+      "email": "akanksha@gmail.com",
+      "mob": "5645667564",
+      "gender": "female",
+      "password": "akanksha",
+      "confirmPass": "akanksha"
+    },
+    {
+      "id": "32db",
+      "name": "Shreyash",
+      "pan": "DFDFD3434F",
+      "email": "shreyash@gmail.com",
+      "mob": "3435433454",
+      "gender": "male",
+      "password": "shreyash123",
+      "confirmPass": "shreyash123"
+    }
+  ],
+  "owner": [
+    {
+      "id": "f672",
+      "name": "Shraddha",
+      "pan": "DFDF45673",
+      "email": "shraddha@gmail.com",
+      "mob": "9999999999",
+      "gender": "female",
+      "password": "shraddha",
+      "confirmPass": "shraddha"
+    },
+    {
+      "id": "dbf3",
+      "name": "shreyash A",
+      "pan": "DFDFA3434G",
+      "email": "shreyash@gmail.com",
+      "mob": "9879875654",
+      "gender": "male",
+      "password": "shreyash",
+      "confirmPass": "shreyash"
+    },
+   
+    {
+      "id": "39bd",
+      "name": "Nivel",
+      "pan": "JHJJH7685D",
+      "email": "nivel@gmail.com",
+      "mob": "9485745745",
+      "gender": "male",
+      "password": "nivel123",
+      "confirmPass": "nivel123"
+    }
+  ],
+  "user": [
+    {
+      "id": "e0ff",
+      "name": "Shraddha",
+      "pan": "DFFDF4545G",
+      "email": "shraddha@gmail.com",
+      "mob": "4335345345",
+      "gender": "female",
+      "password": "shraddha",
+      "confirmPass": "shraddha"
+    }
+  ],
+  "hotelDetails": [
+    {
+      "id": "64c2",
+      "ownerName": "bhagyashri",
+      "ownerMobile": "9898989898",
+      "hotelName": "Hotel Havai",
+      "hotelMobile": "9856564565",
+      "hotelAdderss": "pune",
+      "state": "2",
+      "city": "3",
+      "hotelMenu": "",
+      "roomAvailable": "",
+      "userPass": "bhagyashri"
+    },
+    {
+      "id": "30aa",
+      "ownerName": "Akanksha",
+      "ownerMobile": "6565656565",
+      "hotelName": "Hotel Lunch",
+      "hotelMobile": "6565656565",
+      "hotelAdderss": "kolhapur",
+      "state": "2",
+      "city": "2",
+      "hotelMenu": "",
+      "roomAvailable": "",
+      "userPass": "akanksha"
+    },
+  
+    {
+      "id": "4b46",
+      "ownerName": "shraddha",
+      "ownerMobile": "987897878",
+      "hotelName": "Hotel DreamLand",
+      "hotelMobile": "0989987",
+      "hotelAdderss": "Kolhapur",
+      "state": "2",
+      "city": "3",
+      "hotelMenu": "veg, nonveg",
+      "roomAvailable": "",
+      "userPass": "shraddha@123"
+    },
+    {
+      "id": "8069",
+      "ownerName": "Shraddha",
+      "ownerMobile": "9878788987",
+      "hotelName": "Hotel EatForever",
+      "hotelMobile": "543464",
+      "hotelAdderss": "Pune",
+      "state": "2",
+      "city": "2",
+      "hotelMenu": "veg",
+      "roomAvailable": "",
+      "userPass": "shraddha@123"
+    },
+    {
+      "id": "fb26",
+      "ownerName": "Akanksha",
+      "ownerMobile": "8564754544",
+      "hotelName": "Hotel Hello",
+      "hotelMobile": "455454",
+      "hotelAdderss": "Kolhapur",
+      "state": "",
+      "city": "",
+      "hotelMenu": "veg",
+      "roomAvailable": "",
+      "userPass": "akanksha"
+    },
+    {
+      "id": "ad24",
+      "ownerName": "Nivel",
+      "ownerMobile": "8493587393",
+      "hotelName": "Hitel Rajvada",
+      "hotelMobile": "345464",
+      "hotelAdderss": "Kolhapur",
+      "state": "1",
+      "city": "1",
+      "hotelMenu": "non veg",
+      "roomAvailable": "",
+      "userPass": "nivel123"
+    }
+  ],
+  "hotelBooking": []
+}

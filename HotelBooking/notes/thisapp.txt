@@ -11,6 +11,7 @@ first start owner jurney
 make two buttons in owner signin and back 
 when click on back redirect to landing page and 
 when click on signin button redirect to login page 
-make login form using templatedriven or reactive forms for that need to import formmodule and reactiveformmodule in appmodule 
+make login form using templatedriven or reactive forms for that need to import formmodule and reactiveform module in appmodule 
+then make signup form also using reactiveform and 
 
 

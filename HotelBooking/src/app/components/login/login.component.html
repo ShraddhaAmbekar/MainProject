@@ -1,22 +1,28 @@
 <div class="login">
   <div class="box">
+    <button class="btn-cancel" routerLink=""><i class="bi bi-chevron-left"></i></button>
     <form class="mx-auto" #loginForm="ngForm">
+     
       <h4 class="text-center">Login</h4>
       <div class="mb-3 mt-4">
         <label class="form-label">User Name</label>
         <input type="text" class="form-control" ngModel name="userName" #userName="ngModel" required>
-        <span *ngIf="userName?.errors?.['required'] && userName.touched" class="error">Username is required</span>
       </div>
 
       <div class="mb-3">
         <label class="form-label">Password</label>
-        <input type="password" class="form-control" ngModel #password="ngModel" ngModel name="password" required>
-        <span *ngIf="userName?.errors?.['required'] && password.touched" class="error">Password is required</span>
+        <input type="password" class="form-control pass" ngModel #password="ngModel" ngModel name="password" required [type]="showPassword ? 'text' : 'password'">
+        <mat-icon class="eye" *ngIf="show" (click)="toShowPassword()">visibility</mat-icon>
+        <mat-icon class="eye" *ngIf="!show" (click)="toShowPassword()">visibility_off</mat-icon> 
+        
         <div class="form-text mt-3">Forget password ?</div>
       </div>
+
+      <small *ngIf="notValid==true" class="error">Invalid User Name or Password</small>
       
       <button type="submit" (click)="submit(loginForm.value)" class="btn btn-primary mt-3 mb-4">Login</button>
       <h5 class="create">Don't have account <strong routerLink="/signUp">Create account</strong></h5>
+    
     </form>
   </div>
 </div>

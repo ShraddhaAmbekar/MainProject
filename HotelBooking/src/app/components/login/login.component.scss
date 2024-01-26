@@ -11,6 +11,18 @@
   width:100%;
   position: absolute;
 }
+.btn-cancel {
+
+  background: transparent;
+  border:1px solid white;
+  font-size: 20px;
+  position: absolute;
+  color: #ffffff;
+  left:3.67rem;
+  top:3.67rem;
+}
+
+
 form{
   border-radius: 20px;
   margin-top: 150px ;
@@ -50,5 +62,11 @@ h4{
 .create{
   font-size: 13px;
   text-align: center;
-
 }
+
+.eye{
+  position: relative;
+  left:270px;
+  bottom:30px;
+  color: #030010;
+ }

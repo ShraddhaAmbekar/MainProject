@@ -1,27 +1,38 @@
 <div class="bg">
   <div class="container">
     <div class="frame">   
+      <button class="btn-cancel" routerLink="/login">x</button>
       <form  [formGroup]="signUpForm" class="form-signup" (ngSubmit)="submit()">
         <label>Full name</label>
         <input class="form-styling" type="text" formControlName="name"/>
+        <small class="error" *ngIf="!signUpForm.get('name')?.valid && signUpForm.get('name')?.touched">*Full Name is required</small>
         <label>Pan</label>
-        <input class="form-styling" type="text" formControlName="pan"/>
+        <input class="form-styling" type="text" formControlName="pan" maxlength="10"/>
+        <small class="error" *ngIf="!signUpForm.get('pan')?.valid ">*Enter valid pan card Number</small>
         <label>Email</label>
         <input class="form-styling" type="email" formControlName="email"/>
+        <small class="error" *ngIf="!signUpForm.get('email')?.valid && signUpForm.get('email')?.touched">*Enter valid email</small>
         <label>Mobile No</label>
-        <input class="form-styling" type="text" formControlName="mob"/>
+        <input class="form-styling" type="text" maxlength="10" formControlName="mob" appNumberOnly/>
+        <small class="error" *ngIf="!signUpForm.get('mob')?.valid && signUpForm.get('mob')?.touched">*Mobile Number is required</small>
         <label>Gender</label>
         <div class="gender-category">
-          <input type="radio" name="gender" formControlName="gender" value="male"><span class="label">Male</span>
-          <input type="radio" name="gender" formControlName="gender" value="female"><span class="label">Female</span>
-          <input type="radio" name="gender" formControlName="gender" value="other"><span class="label">Other</span>
+          <input type="radio" name="gender" formControlName="gender" value="male"><span class="label m-2">Male</span>
+          <input type="radio" name="gender" formControlName="gender" value="female"><span class="label m-2">Female</span>
+          <input type="radio" name="gender" formControlName="gender" value="other"><span class="label m-2">Other</span>
         </div>
         <label>Password</label>
-        <input class="form-styling" type="text" formControlName="password"/>
+        <input class="form-styling" formControlName="password" [type]="showPassword ? 'text' : 'password'"/>  
+        <mat-icon class="eye" *ngIf="showPassword" (click)="toShowPassword()">visibility</mat-icon>
+        <mat-icon class="eye" *ngIf="!showPassword" (click)="toShowPassword()">visibility_off</mat-icon>  
+        <small class="error" *ngIf="!signUpForm.get('password')?.valid && signUpForm.get('password')?.touched">*Password is required</small>
         <label>Confirm password</label>
-        <input class="form-styling" type="text" formControlName="confirmPass"/>
-        <input type="checkbox" formControlName="Tnc"/><span class="label">Tnc</span>
-        <button class="btn-signup">Sign Up</button>
+        <input class="form-styling pass" formControlName="confirmPass" [type]="showConfirmPassword ? 'text' : 'password'" (keyup)="matchPassword()"/>
+        <mat-icon class="eye" *ngIf="showConfirmPassword" (click)="toShowConfirmPassword()">visibility</mat-icon>
+        <mat-icon class="eye" *ngIf="!showConfirmPassword" (click)="toShowConfirmPassword()">visibility_off</mat-icon>
+        <small class="error" *ngIf="!signUpForm.get('confirmPass')?.valid && signUpForm.get('confirmPass')?.touched" confirmPass>*Confirm Password is required</small>
+        <small class="error" *ngIf="isMatch && signUpForm.get('confirmPass')?.value!=''"> *password and confirm password should be equal</small>
+        <button class="btn-signup" >Sign Up</button>        
       </form>
                   
     </div>
