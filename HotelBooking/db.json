@@ -52,7 +52,6 @@
       "password": "shreyash",
       "confirmPass": "shreyash"
     },
-   
     {
       "id": "39bd",
       "name": "Nivel",
@@ -103,7 +102,6 @@
       "roomAvailable": "",
       "userPass": "akanksha"
     },
-  
     {
       "id": "4b46",
       "ownerName": "shraddha",
@@ -123,12 +121,51 @@
       "ownerMobile": "9878788987",
       "hotelName": "Hotel EatForever",
       "hotelMobile": "543464",
-      "hotelAdderss": "Pune",
-      "state": "2",
-      "city": "2",
+      "hotelAdderss": "Shaniwar peth",
+      "state": "Karrnatak",
+      "city": "Belgaon",
+      "hotelMenu": "veg",
+      "roomAvailable": "4",
+      "userPass": "shraddha@123"
+    },
+    {
+      "id": "8769",
+      "ownerName": "Shraddha",
+      "ownerMobile": "9878788987",
+      "hotelName": "Hotel Nanda",
+      "hotelMobile": "543464",
+      "hotelAdderss": "hatiroad",
+      "state": "Karrnatak",
+      "city": "Belgaon",
+      "hotelMenu": "veg",
+      "roomAvailable": "3",
+      "userPass": "shraddha@123"
+    },
+    {
+      "id": "9879",
+      "ownerName": "Shraddha",
+      "ownerMobile": "9878788987",
+      "hotelName": "Hotel Vijay",
+      "hotelMobile": "543464",
+      "hotelAdderss": "Shivaji Peth",
+      "state": "Maharashtra",
+      "city": "Kolhapur",
+      "hotelMenu": "veg",
+      "roomAvailable": "5",
+      "userPass": "shraddha"
+    },
+    {
+      "id": "9879",
+      "ownerName": "Shraddha",
+      "ownerMobile": "9878788987",
+      "hotelName": "Hotel Hamara",
+      "hotelMobile": "84654654",
+      "hotelAdderss": "Mumbai",
+      "state": "Maharashtra",
+      "city": "Mumbai",
       "hotelMenu": "veg",
       "roomAvailable": "",
-      "userPass": "shraddha@123"
+      "userPass": "shraddha"
     },
     {
       "id": "fb26",
@@ -155,6 +192,71 @@
       "hotelMenu": "non veg",
       "roomAvailable": "",
       "userPass": "nivel123"
+    },
+    {
+      "id": "85d0",
+      "ownerName": "Shraddha",
+      "ownerMobile": "9878788987",
+      "hotelName": "Hotel Tagline",
+      "hotelMobile": "543464",
+      "hotelAdderss": "Govindanand socity",
+      "state": "Maharashtra",
+      "city": "pune",
+      "hotelMenu": "Nonveg",
+      "roomAvailable": "3",
+      "userPass": "shraddha@123"
+    },
+    {
+      "id": "6ab9",
+      "ownerName": "Shraddha",
+      "ownerMobile": "9878788987",
+      "hotelName": "Hotel Vijay",
+      "hotelMobile": "543464",
+      "hotelAdderss": "Shivaji Park",
+      "state": "Maharashtra",
+      "city": "pune",
+      "hotelMenu": "veg",
+      "roomAvailable": "5",
+      "userPass": "shraddha@123"
+    },
+    {
+      "id": "a178",
+      "ownerName": "Shraddha",
+      "ownerMobile": "9878788987",
+      "hotelName": "Hotel Itani",
+      "hotelMobile": "543464",
+      "hotelAdderss": "Shaniwar peth",
+      "state": "Karrnatak",
+      "city": "Belgaon",
+      "hotelMenu": "nonveg",
+      "roomAvailable": "3",
+      "userPass": "shraddha@123"
+    },
+    {
+      "id": "79ef",
+      "ownerName": "Shraddha",
+      "ownerMobile": "9878788987",
+      "hotelName": "Hotel EatForever",
+      "hotelMobile": "543464",
+      "hotelAdderss": "Shaniwar peth",
+      "state": "Karrnatak",
+      "city": "Belgaon",
+      "hotelMenu": "veg",
+      "roomAvailable": "4",
+      "userPass": "shraddha@123"
+    },
+    {
+      "id": "173d",
+      "ownerName": "",
+      "ownerMobile": null,
+      "hotelName": "",
+      "hotelMobile": null,
+      "hotelAdderss": "",
+      "state": "",
+      "city": "",
+      "hotelMenu": "",
+      "roomAvailable": "",
+      "userPass": ""
     }
   ],
   "hotelBooking": []

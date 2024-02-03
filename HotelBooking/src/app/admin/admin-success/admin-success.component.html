@@ -1,1 +1,29 @@
-<p>admin-success works!</p>
+<button (click)=" viewOwners()">View Owners Data</button>
+<div  *ngIf='showHotelData'>
+ 
+  <input type="search" [(ngModel)]="searchText"><br><br>
+
+  <table class="text-center table-container">
+    <thead class="headings">
+      <th *ngFor="let headings of headers">
+      {{headings}}</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hotelData of hotelData |search : searchText">
+        <td>{{hotelData.ownerName|titlecase}}</td>
+        <td>{{hotelData.ownerMobile}}</td>
+        <td>{{hotelData.hotelName}}</td>
+        <td>{{hotelData.hotelMobile}}</td>
+        <td>{{hotelData.hotelAdderss}}</td>
+        <td>{{hotelData.state}}</td>
+        <td>{{hotelData.city}}</td>
+        <td>{{hotelData.hotelMenu}}</td>
+        <td>{{hotelData.roomAvailable}}</td>
+        <td><i class="bi bi-trash"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div  *ngIf='showMsg' class="text-center">
+  <h3>No Data Found</h3>
+</div>

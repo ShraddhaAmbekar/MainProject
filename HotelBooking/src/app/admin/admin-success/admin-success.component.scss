@@ -1,0 +1,19 @@
+.table-container{
+  text-align: center;
+}
+
+table{
+  text-align: left;
+  margin: auto;
+  border: 3px black solid;
+  border-collapse:collapse; 
+}
+th{
+  padding: 20px;  
+  border: 2px brown solid;
+  font-size: large;
+}
+td{
+  border:2px solid rgb(47, 47, 47);
+  padding:10px;
+}

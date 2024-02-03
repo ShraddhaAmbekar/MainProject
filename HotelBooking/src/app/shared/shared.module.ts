@@ -4,11 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { NumberOnlyDirective } from '../directives/number-only.directive';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
   declarations: [
     NumberOnlyDirective,
+    SearchPipe,
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { NumberOnlyDirective } from '../directives/number-only.directive';
     ReactiveFormsModule,
     MatIconModule,
     MatInputModule,
-    NumberOnlyDirective
+    NumberOnlyDirective,
+    SearchPipe
   ]
 })
 export class SharedModule {}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-success',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-success.component.scss']
 })
 export class UserSuccessComponent {
+hotelData: any;
+searchText:any="";
+
+  constructor(private router:Router){}
+
+hotelShow(){
+  this.router.navigateByUrl('/user/hotelShow')
+}
+
 
 }

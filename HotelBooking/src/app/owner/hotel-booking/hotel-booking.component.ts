@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,} from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiCallService } from 'src/app/shared/api-call.service';
+import { DataService } from 'src/app/shared/data.service';
 
 @Component({
   selector: 'app-hotel-booking',
@@ -10,26 +11,36 @@ import { ApiCallService } from 'src/app/shared/api-call.service';
 })
 export class HotelBookingComponent {
   hotelRagistrationForm!:FormGroup;
-
-  constructor(private formBuilder : FormBuilder, private apiCallService:ApiCallService, private router:Router){}
+  list:any;
+  selectedStatesList: any[] = [];
+  dataById:any
+ 
+  constructor(private formBuilder : FormBuilder,private dataService :DataService, private apiCallService:ApiCallService, private router:Router){}
   
    ngOnInit(){
+    
+    this.dataById = this.apiCallService.dataById;
      this.formLoad();
-     this.functionCalling()
+     this.functionCalling();
+     
+     console.log('this.dataById', this.dataById);     
     };
-
+  
    formLoad(){
+ 
+    console.log('this.apiCallService.dataById', this.apiCallService.dataById);
+    console.log('this.dataById', this.dataById);
     this.hotelRagistrationForm=this.formBuilder.group({
-      ownerName:['',[Validators.required],[Validators.minLength(3)]],
-      ownerMobile :['',[Validators.required]],
-      hotelName :['',[Validators.required]],
-      hotelMobile :['',[Validators.required]],
-      hotelAdderss :['',[Validators.required]],
-      state:[''],
-      city:[''],
-      hotelMenu :['',[Validators.required]],
-      roomAvailable :['',[Validators.required]],
-      userPass: ['',[Validators.required]]
+      ownerName:[this.dataById? this.dataById?.ownerName:''],
+      ownerMobile :[this.dataById? this.dataById?.ownerMobile:null,[Validators.required]],
+      hotelName :[this.dataById? this.dataById?.hotelName:'',[Validators.required]],
+      hotelMobile :[this.dataById? this.dataById?.hotelMobile:null,[Validators.required]],
+      hotelAdderss :[this.dataById? this.dataById?.hotelAdderss:'',[Validators.required]],
+      state:[this.dataById? this.dataById?.state:''],
+      city:[this.dataById? this.dataById?.city:''],
+      hotelMenu :[this.dataById? this.dataById?.hotelMenu:'',[Validators.required]],
+      roomAvailable :[this.dataById? this.dataById?.roomAvailable:'',[Validators.required]],
+      userPass: [this.dataById? this.dataById?.userPass:'',[Validators.required]]
     })
    }
 
@@ -40,59 +51,26 @@ export class HotelBookingComponent {
       this.router.navigateByUrl('/owner/ownerSuccess')
     })
    }
+   
 
+   async update(){
+    let respo = await this.apiCallService.updateData('hotelDetails',this.dataById?.id,this.hotelRagistrationForm.value).toPromise()
+    this.router.navigateByUrl('/owner/ownerSuccess')
+   }
 
+   
 
-   list = [
-    {
-      id: 1,
-      label: 'Maharashtra',
-      city: [
-        {
-          id: 101,
-          label: 'Kolhapur'
-        },
-        {
-          id: 102,
-          label: 'pune'
-        },
-        {
-          id: 103,
-          label: 'Mumbai'
-        },
-      ]
-    },
-    {
-      id: 2,
-      label: 'Karrnatak',
-      city: [
-        {
-          id: 201,
-          label: 'Belgaon'
-        },
-        {
-          id: 202,
-          label: 'Bengluru'
-        },
-      ]
-    }
-  ]
-
-
-  selectedStatesList: any[] = []
-  // submit(){
-  //   console.log(this.dropdownForm.value)
-  // }
-
-
+   reset(){
+    this.apiCallService.dataById = null;
+  }
 
   functionCalling() {
-    this.hotelRagistrationForm.get('state')?.valueChanges.subscribe((res: number) => {
+    this.hotelRagistrationForm.get('state')?.valueChanges.subscribe((res: any) => {
       console.log(res);
       this.hotelRagistrationForm.get('city')?.setValue(null);
 
       if (res) {
-        this.selectedStatesList = this.list.filter((obj: any) => obj.id === res)[0].city
+        this.selectedStatesList = this.list.filter((obj: any) => obj.label === res)[0].city
         this.hotelRagistrationForm.get('city')?.enable()
       }
       else {
@@ -100,6 +78,8 @@ export class HotelBookingComponent {
       }
     }
     )
+
+    this.list=this.dataService.list
   }
 
 

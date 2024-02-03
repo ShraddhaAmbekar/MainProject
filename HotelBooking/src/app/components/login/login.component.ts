@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { ApiCallService } from 'src/app/shared/api-call.service';
 
 
@@ -15,6 +14,7 @@ export class LoginComponent {
   endpoint:any;
   data:any;
   notValid:boolean=false;
+  journey:any;
 
   constructor(private apiCallService : ApiCallService, private router:Router){}
 
@@ -24,18 +24,16 @@ export class LoginComponent {
   }
 
   toShowPassword(){
-    //  this.showPassword= true;
-    //  this.show = true
     this.showPassword = !this.showPassword;
     this.show = !this.show ;
   }
-
 
   submit(loginform:any){
     console.log(loginform);
     this.data.find((ele:any)=>{
       if(loginform.userName == ele.name && loginform.password ==ele.password){
-        //console.log('match');
+        this.apiCallService.userName =loginform.userName
+
         if(this.endpoint ==='admin'){
           this.router.navigateByUrl('/admin/adminSuccess')
         }else if(this.endpoint === 'owner'){
@@ -55,7 +53,8 @@ export class LoginComponent {
   getData(){
     this.apiCallService.getApiCall(this.endpoint).subscribe(resp=>{
       this.data=resp
-      console.log('this.data ',this.data );
+      console.log('this.data ',this.data);
     })
-  }
+  }  
+
 }

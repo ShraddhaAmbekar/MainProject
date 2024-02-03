@@ -1,1 +1,23 @@
-<p>user-success works!</p>
+<button routerLink="/user/hotelshow">See Hotels</button>
+
+<main class="black-border">
+
+  <!-- TOOBAR TO ADD AND SEARCH EMPLOYEES -->
+  <div class="toolbar">
+    <div class="search-hotels">
+      <input type="search" [(ngModel)]="searchText"><br><br>     
+    </div>
+  </div>
+
+  <!-- AREA TO DISPLAY ALL THE EMPLOYEES -->
+  <div class="card-group">
+    <div class="card">
+      <div class="col-lg-4 mt-6 hotelshow">
+          <app-hotelshow ></app-hotelshow><br>    
+      </div>
+    </div>
+
+    
+
+  </div>
+</main>

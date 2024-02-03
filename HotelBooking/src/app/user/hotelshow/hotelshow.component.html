@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="card-group">
+    <div *ngFor="let hotelData of hotelData |search : searchText">
+        
+            <div class="card">
+                <div class="col-md-2 d-flex justify-content-center align-items-center">
+                    <img src="../../assets/Images/{{hotelData.profile}}" alt="Profile Image" class="profile">
+                </div>
+
+                <div class="row ps-2">
+                    <div class="col-g-0">
+                        <div class="row-md-10 text-center mt-4">
+                            <span class="name">{{hotelData.hotelName| titlecase}}</span>
+                        </div>
+
+                    </div>
+                  <div class="col g-0 mt-4">
+                      <div class="row-md">
+                            <table class="table table-hover mx-auto">
+                                <tbody>
+                                    <tr>
+                                        <td>Hotel Address</td>
+                                        <td>{{hotelData.hotelAdderss}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Contact</td>
+                                        <td>{{hotelData.hotelMobile}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>OwnerName</td>
+                                        <td>{{hotelData.ownerName| titlecase}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hotel Menu</td>
+                                        <td>{{hotelData.hotelMenu}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rooms Available</td>
+                                        <td>{{hotelData.roomAvailable}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

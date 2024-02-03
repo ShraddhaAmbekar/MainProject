@@ -1,3 +1,32 @@
-<p>owner-success works!</p>
-<button routerLink="/owner/hotelBooking">Book your hotel</button>
-<button (click)="getYourHotelData()">View your hotel</button>
+<button routerLink="/owner/hotelBooking" (click)="reset()">Book your hotel</button>
+<button (click)="viewHotels()">View your hotel</button>
+<div *ngIf='showHotelData'>
+  <h2 class="profile"> <i class="bi bi-person-circle text-center"></i><br>{{ownerName}}</h2>
+</div>
+<div  *ngIf='showHotelData'>
+ 
+  <table class="table table-bordered text-center">
+    <thead class="headings">
+      <th *ngFor="let headings of headers">
+      {{headings}}</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hotelData of hotelByOwner">
+        <td>{{hotelData.hotelName}}</td>
+        <td>{{hotelData.hotelMobile}}</td>
+        <td>{{hotelData.hotelAdderss}}</td>
+        <td>{{hotelData.state}}</td>
+        <td>{{hotelData.city}}</td>
+        <td>{{hotelData.hotelMenu}}</td>
+        <td>{{hotelData.roomAvailable}}</td>
+        <td><i (click)="edit(hotelData.id)" class="bi bi-pencil-fill"></i></td>
+        <td><i class="bi bi-trash" (click)="delete(hotelData.id)"></i></td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div  *ngIf='showMsg' class="text-center">
+  <h3>No Data Found</h3>
+</div>
+

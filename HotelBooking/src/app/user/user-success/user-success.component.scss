@@ -1,0 +1,63 @@
+.black-border {
+  border: 1px solid black;
+  display: inline;
+
+}
+
+.hotel{
+  display:flex;
+}
+
+main {
+  width: 90%;
+  margin: 3rem auto 0px;
+  display: flex;
+  border: 1px solid black;
+}
+
+.toolbar {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+
+.search-employees {
+  width: 50%;
+  height: 90%;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px rgba(34, 34, 34, 0.5);
+  justify-content: center;
+}
+
+.search-employees input {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+}
+
+
+app-hotelshow {
+  
+  width: 100%;
+  margin: 5px auto;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px rgba(34, 34, 34, 0.5);
+  float: left;
+  
+}
+
+.form-heading {
+  border-top: 1px solid black;
+}
+
+.form-heading h6 {
+  text-align: center;
+  background-color: white;
+  width: 200px;
+  transform: translateY(-50%);
+}
+
