@@ -1,0 +1,30 @@
+<div class="open">
+  <div class="overley" *ngIf="dataService.showDialog">
+    <div class="container">
+      <button class="btn-cancel" (click)="dataService.showDialog=false">x</button>
+      <div class="popup">
+        <div class="card m-3 Larger shadow" routerLink="/login" (click)="journey('admin')">
+          <div class="card-body text-center">
+            <!-- <h4 class="card-title text-center">Admin</h4> -->
+            <img src="/assets/images/administrator.png" alt=""><br>
+            <p class="signin">Admin</p>
+          </div>
+        </div>
+        <div class="card m-3 Larger shadow" routerLink="/login" (click)="journey('owner')">
+          <div class="card-body text-center">
+            <!-- <h4 class="card-title text-center">Admin</h4> -->
+            <img src="/assets/images/customer-service.png" alt=""><br>
+            <p class="signin">Owner</p>
+          </div>
+        </div>
+        <div class="card m-3 Larger shadow" routerLink="/login" (click)="journey('user')">
+          <div class="card-body text-center">
+            <!-- <h4 class="card-title text-center">Admin</h4> -->
+            <img src='/assets/images/usericon.png' alt=""><br>
+            <p class="signin">User</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

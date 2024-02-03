@@ -3,16 +3,15 @@ import { ApiCallService } from 'src/app/shared/api-call.service';
 import { DataService } from 'src/app/shared/data.service';
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.scss']
+  selector: 'app-journey-start',
+  templateUrl: './journey-start.component.html',
+  styleUrls: ['./journey-start.component.scss']
 })
-export class LandingComponent {
+export class JourneyStartComponent {
+  constructor(public dataService:DataService,private apiCallService:ApiCallService){}
 
-  constructor(private apiCallService: ApiCallService,public dataService:DataService) { }
-
+  
   journey(journey: any) {
     this.apiCallService.journey = journey
   }
-
 }

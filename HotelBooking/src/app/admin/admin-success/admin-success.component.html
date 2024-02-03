@@ -1,7 +1,8 @@
-<button (click)=" viewOwners()">View Owners Data</button>
+<button (click)=" viewOwners()">View Hotels Data</button>
+
 <div  *ngIf='showHotelData'>
- 
-  <input type="search" [(ngModel)]="searchText"><br><br>
+  
+  <input class="form-control search-employees" type="search" placeholder="Search" [(ngModel)]="searchText">
 
   <table class="text-center table-container">
     <thead class="headings">
@@ -19,7 +20,7 @@
         <td>{{hotelData.city}}</td>
         <td>{{hotelData.hotelMenu}}</td>
         <td>{{hotelData.roomAvailable}}</td>
-        <td><i class="bi bi-trash"></i></td>
+        <td><i class="bi bi-trash" (click)=" delete(hotelData.id)"></i></td>
       </tr>
     </tbody>
   </table>

@@ -1,12 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 @import "node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "node_modules/bootstrap-icons/font/bootstrap-icons.css" ;
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
-.error{
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.error {
   color: rgb(233, 73, 73);
 }
-.btn-cancel{
+
+.btn-cancel {
   background: transparent;
-  border: none}
+  border: 1px solid black;
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  width: min-content;
+  z-index: 1;
+}
+
+
+// .search{
+//   margin: 30px;
+//   width:50%;
+//   margin-inline: 25%;
+//   justify-content: center;
+// }
+.search-employees {
+  width: 80vw;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px rgba(34, 34, 34, 0.5);
+  justify-content: center;
+  margin: 20px auto;
+}

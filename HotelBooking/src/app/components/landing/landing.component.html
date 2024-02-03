@@ -1,10 +1,3 @@
-
-  <nav>
-    <button routerLink="/admin/adminLanding" (click)="journey('admin')">Admin</button>
-    <button routerLink="/owner/ownerLanding" (click)="journey('owner')">Owner</button>
-    <button routerLink="/user/userLanding" (click)="journey('user')">User</button>
-  </nav>
- 
 <section id="home" class="banner_wrapper p-0">
   <div class="swiper">
     <div class="swiper-wrapper">
@@ -14,7 +7,7 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, sit? Quos sapiente blanditiis et aperiam </p>
           </div>  
           <div>
-            <button class="signin-btn">Sign In</button>
+            <button class="signin-btn" routerLink="/journeyStart" (click)="dataService.showDialog=true">Sign In</button>
           </div> 
       </div>
     </div>

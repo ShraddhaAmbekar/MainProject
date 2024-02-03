@@ -111,9 +111,9 @@
                   is required</small>
               </div>
 
-              <div class="d-flex justify-content-end pt-5">
-                <button type="button" class="btn btn-light btn-lg" (click)="reset()" *ngIf="!dataById">Reset all</button>
-                <button type="button" class="btn btn-warning btn-lg ms-2"
+              <div class="d-flex justify-content-center pt-5">
+              
+                <button *ngIf="!dataById" type="button" class="btn btn-warning btn-lg ms-2"
                   (click)="Submit(hotelRagistrationForm.value)">Submit form</button>
                 <button mat-raised-button color="accent" class="btn" (click)="update()" *ngIf="dataById">Update</button>
               </div>

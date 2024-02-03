@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class UserSuccessComponent {
 hotelData: any;
 searchText:any="";
+showHotelData=false;
 
   constructor(private router:Router){}
 
@@ -16,5 +17,7 @@ hotelShow(){
   this.router.navigateByUrl('/user/hotelShow')
 }
 
-
+viewOwners() {
+  this.showHotelData = !this.showHotelData
+}
 }

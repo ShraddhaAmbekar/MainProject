@@ -26,7 +26,7 @@ export class ApiCallService {
     let url=this.url+'/'+ endpoint+'/'+id
     return this.httpClient.patch(url,body)
   }
-  deleteData(endpoint:any, id:any){
+  deleteApiCall(endpoint:any, id:any){
     let url=this.url+'/'+ endpoint+'/'+ id
     return this.httpClient.delete(url,id)
   }

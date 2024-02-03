@@ -31,7 +31,7 @@ export class HotelBookingComponent {
     console.log('this.apiCallService.dataById', this.apiCallService.dataById);
     console.log('this.dataById', this.dataById);
     this.hotelRagistrationForm=this.formBuilder.group({
-      ownerName:[this.dataById? this.dataById?.ownerName:''],
+      ownerName:[this.dataById? this.dataById?.ownerName:'',[Validators.required]],
       ownerMobile :[this.dataById? this.dataById?.ownerMobile:null,[Validators.required]],
       hotelName :[this.dataById? this.dataById?.hotelName:'',[Validators.required]],
       hotelMobile :[this.dataById? this.dataById?.hotelMobile:null,[Validators.required]],
@@ -60,9 +60,7 @@ export class HotelBookingComponent {
 
    
 
-   reset(){
-    this.apiCallService.dataById = null;
-  }
+ 
 
   functionCalling() {
     this.hotelRagistrationForm.get('state')?.valueChanges.subscribe((res: any) => {

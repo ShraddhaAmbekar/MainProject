@@ -65,7 +65,9 @@ console.log('this.apiCallService.dataById',this.apiCallService.dataById);
       }
     
     async delete(id:any){
-      let respo = await this.apiCallService.deleteData('hotelDetails',this.apiCallService.dataById.id).toPromise()
+      let res = await this.apiCallService.deleteApiCall('hotelDetails',id).toPromise();
+      this.getHotelData();
+
     }    
 }
 
