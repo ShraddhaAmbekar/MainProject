@@ -1,12 +1,31 @@
 <main class="black-border">
-  <!-- AREA TO DISPLAY ALL THE EMPLOYEES -->
-  <button routerLink="/user/hotelshow">See Hotels</button>
-  <button (click)="viewBookings()">View Booking data</button>
-<div *ngIf="showBookingData">
- 
- 
+  <div class="background">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid text-warning h-3">
+        BookHeaven
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">           
+              <button routerLink="/user/hotelshow"  class="nav-link active">See Hotels</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" (click)="viewBookings()">View Booking data</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" routerLink="/user/team">Our Team</button>
+            </li>
+          </ul>
+         
+        </div>
+      </div>
+    </nav>
+
+<div *ngIf="showBookingData" class="userdata">
     <table class="table table-bordered text-center">
-      <thead class="headings">
+      <thead class="headings bg-light text-black">
         <th *ngFor="let headings of headers">
         {{headings}}</th>
       </thead>
@@ -24,4 +43,5 @@
       </tbody>
     </table>
   </div>
+</div>
 </main>

@@ -1,11 +1,13 @@
-<button (click)=" viewOwners()">View Hotels Data</button>
-<button (click)="viewBookings()">View Booking Data</button>
+<div class="admin">
+
+<button (click)=" viewOwners()" class="btn text-white btn-rounded">View Hotels Data</button>
+<button (click)="viewBookings()" class="btn text-white btn-rounded">View Booking Data</button>
 
 <div  *ngIf='showHotelData'>
   
   <input class="form-control search-employees" type="search" placeholder="Search" [(ngModel)]="searchText">
 
-  <table class="text-center table-container">
+  <table class="text-center table-container bg-white text-center">
     <thead class="headings">
       <th *ngFor="let headings of headers">
       {{headings}}</th>
@@ -30,7 +32,7 @@
  
  
   <table class="table table-bordered text-center">
-    <thead class="headings">
+    <thead class="headings bg-white text-center">
       <th *ngFor="let headings of bookheaders">
       {{headings}}</th>
     </thead>
@@ -51,4 +53,5 @@
 
 <div  *ngIf='showMsg' class="text-center">
   <h3>No Data Found</h3>
+</div>
 </div>

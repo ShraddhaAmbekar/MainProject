@@ -1,0 +1,41 @@
+.team_wrapper .card{
+  position:relative;
+  overflow:hidden
+}
+.team_wrapper .team_info{
+  background-color: rgb(203, 158, 99);
+  position:absolute;
+  width:100%;
+  bottom: 0;
+  text-align: center;
+  padding:1.25rem;
+  margin-bottom:-4.6875rem;
+  transition: all 0.3s ease-in-out;
+}
+.team_wrapper .card:hover .team_info {
+margin-bottom:0
+}
+.team_wrapper .team_info h5,
+.team_wrapper .team_info p{
+  color: white;
+}
+.team_wrapper .team_info .social-network{
+transition: all 0.3s ease-in-out;
+padding:1.25rem;
+margin:1.25rem -1.25rem -1.25rem;
+background-color: rgb(15, 15, 58);
+list-style:none;
+display: flex;
+align-items:center;
+justify-content:space-around;
+}
+.team_wrapper .team_info .social-network li a{
+  width:2rem;
+  height:2rem;
+  line-height :2rem;
+  font-size:0.9375rem;
+  color: white;
+ 
+
+
+}

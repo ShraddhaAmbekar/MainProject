@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { UserSuccessComponent } from './user-success/user-success.component';
 import { HotelshowComponent } from './hotelshow/hotelshow.component';
 import { BookNowComponent } from './book-now/book-now.component';
+import { TeamComponent } from './team/team.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { BookNowComponent } from './book-now/book-now.component';
     UserLandingComponent,
     UserSuccessComponent,
     HotelshowComponent,
-    BookNowComponent
+    BookNowComponent,
+    TeamComponent
   ],
   imports: [
     CommonModule,
