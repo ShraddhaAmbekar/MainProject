@@ -1,0 +1,144 @@
+.btn-cancel {
+  float: right;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+}
+
+
+.bg{
+  background:
+    linear-gradient(
+    rgba(108, 181, 185, 0.8),
+    rgba(188, 225, 227, 0.8)),  
+}
+
+.container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.frame {
+  height: 1000px;
+  width: 600px;
+  background:
+  linear-gradient(
+   rgba(101, 1, 249, 0.856),
+   rgba(27, 0, 66, 0.856));
+  background-size: cover;
+  margin: auto;
+  border-top: solid 1px rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 7px 6px 10px rgba(0, 0, 0, 0.794);
+}
+
+.form-signup {
+  width: 600px;
+  height: 400px;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+}
+
+.form-styling {
+  width: 100%;
+  height: 35px;
+  padding-left: 15px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  background: rgba(255,255,255);
+}
+
+label {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding-left: 15px;
+  padding-bottom: 9px;
+  color: rgba(255, 255, 255, 0.687);
+  display: block;
+}
+
+:focus {outline: none;
+}
+
+.gender-category{
+    display: flex;
+    margin:0px 25px;
+}
+  
+.label{
+    color: rgba(255,255,255,.7);
+    padding: 0 15px 0px 10px;
+  }
+
+.btn-signup {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #ffffff;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 22px;
+  background-color: #10a7ff;
+}  
+
+.eye{
+  position: relative;
+  left:380px;
+  top:-50px;
+  color: #2c0d9c;
+}
+.error{
+  margin-top:-20px ;
+}
+
+.half{
+  display: flex;
+}
+.half div,.half input{
+  margin: 15px;
+}
+
+
+
+
+
+
+
+
+
+.book-area{
+  width: 600px;
+  border: 2px solid;
+  padding: 10px;
+position: relative;
+justify-content: center;
+margin: auto;
+top:20px
+}
+
+.heading{
+  font-size:30px;
+  margin: 10px;
+  
+}
+.check-available{
+  background-color: rgb(255, 255, 255);
+  margin: 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 5px; 
+}
+
+label{
+  margin:10px 40px;
+}
+

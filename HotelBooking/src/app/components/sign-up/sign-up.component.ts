@@ -34,6 +34,7 @@ export class SignUpComponent {
       gender: ['', [Validators.required]],
       password: ['', [Validators.required]],
       confirmPass: ['', [Validators.required]],
+      tc:[true]
     })
   }
 
@@ -60,6 +61,7 @@ export class SignUpComponent {
 
   //submit data to database using api method
   submit() {
+  
     let endpoint = this.apiCallService.journey;
     //console.log(this.signUpForm.value)
     this.apiCallService.postApiCall(endpoint, this.signUpForm.value).subscribe

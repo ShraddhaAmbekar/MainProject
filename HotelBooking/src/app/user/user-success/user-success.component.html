@@ -1,13 +1,27 @@
 <main class="black-border">
   <!-- AREA TO DISPLAY ALL THE EMPLOYEES -->
-  <button (click)=" viewOwners()" *ngIf="!showHotelData">See Hotels</button>
-  
-  <div class="card-group" *ngIf="showHotelData">
-    <button (click)="showHotelData=false" class="btn-cancel">x</button>
-    <div class="card">
-      <div class="col-lg-4 mt-6 hotelshow">
-          <app-hotelshow ></app-hotelshow><br>    
-      </div>
-    </div>
+  <button routerLink="/user/hotelshow">See Hotels</button>
+  <button (click)="viewBookings()">View Booking data</button>
+<div *ngIf="showBookingData">
+ 
+ 
+    <table class="table table-bordered text-center">
+      <thead class="headings">
+        <th *ngFor="let headings of headers">
+        {{headings}}</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bookingData of bookingsByUser">
+          <td>{{bookingData.userName}}</td>
+          <td>{{bookingData.adhar}}</td>
+          <td>{{bookingData.email}}</td>
+          <td>{{bookingData.mob}}</td>
+          <td>{{bookingData.checkin}}</td>
+          <td>{{bookingData.checkout}}</td>
+          <td>{{bookingData.adult}}</td> 
+          <td>{{bookingData.child}}</td> 
+        </tr>
+      </tbody>
+    </table>
   </div>
 </main>

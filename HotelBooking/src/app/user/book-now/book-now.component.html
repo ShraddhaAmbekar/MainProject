@@ -1,1 +1,47 @@
-<p>book-now works!</p>
+<div class="bg">
+  
+  <div class="container">
+    <div class="frame">
+      <button class="btn-cancel" routerLink="/login">x</button>
+      <h1 class="text-center m-3 text-white">Welcome to {{dataById.hotelName}}</h1>
+      <form [formGroup]="bookNowForm" class="form-signup" (ngSubmit)="submit()">
+        <label>User name</label>
+        <input class="form-styling" type="text" formControlName="userName" />
+        <small class="error" *ngIf="!bookNowForm.get('userName')?.valid && bookNowForm.get('userName')?.touched">*User Name is
+          required</small>
+        <label>Adhar Card Number</label>
+        <input class="form-styling" type="text" formControlName="adhar" maxlength="12" appNumberOnly />
+        <small class="error" *ngIf="!bookNowForm.get('adhar')?.valid ">*Enter valid pan card Number</small>
+        <label>Email</label>
+        <input class="form-styling" type="email" formControlName="email" />
+        <small class="error" *ngIf="!bookNowForm.get('email')?.valid && bookNowForm.get('email')?.touched">*Enter valid
+          email</small>
+        <label>Mobile No</label>
+        <input class="form-styling" type="text" maxlength="10" formControlName="mob" appNumberOnly />
+        <small class="error" *ngIf="!bookNowForm.get('mob')?.valid && bookNowForm.get('mob')?.touched">*Mobile Number is
+          required</small>
+      
+          <div class="half">
+            <div>
+            <label>Check In date :</label>
+              <input type="date" placeholder="Date" formControlName="checkin" class="form-control form-styling mt-3">
+            </div>
+            <div>
+            <label>Check Out date :</label>
+              <input type="date" placeholder="Date" formControlName="checkout" class="form-control form-styling mt-3">
+            </div>
+          </div>
+          <label>Select no of persons: </label>
+          <div class="half">       
+            <input type="number" class=" form-styling" placeholder="adult" formControlName="adult"/>                   
+            <input type="number" class="form-styling" placeholder="childeren" formControlName="child">
+        </div><br>
+          <label>Booking Amount</label>
+            <input type="text" class="form-control form-styling" formControlName="amount">         
+
+        <button class="btn-signup">Submit</button>
+      </form>
+
+    </div>
+  </div>
+</div>

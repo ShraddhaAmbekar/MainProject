@@ -1,15 +1,17 @@
 <div class="container-fluid">
+    
     <div class="search-hotels">
         <input class="form-control search-employees" type="search" placeholder="Search" [(ngModel)]="searchText">
     </div>
-
+    
 
     <div class="card-group background">
+        <button routerLink="/user/userSuccess" class="btn-cancel">x</button>
         <div *ngFor="let hotelData of hotelData |search : searchText">
 
             <div class="card">
-                <div class="col-md-2 d-flex justify-content-center align-items-center">
-                    <img src="../../assets/Images/{{hotelData.profile}}" alt="Profile Image" class="profile">
+                <div class="col-md-2 col-lg-4 justify-content-center align-items-center">
+                    <img src="{{hotelData.imageField}}" alt="Profile Image" class="profile">
                 </div>
 
                 <div class="row ps-2">
@@ -53,7 +55,7 @@
                                 </tbody>
                                 
                             </table>
-                            <button routerLink="/user/bookNow">Book Now</button>
+                            <button (click)="book(hotelData.id)" class="btn" routerLink="/user/bookNow">Book Now</button>
                         </div>
                     </div>
                 </div>

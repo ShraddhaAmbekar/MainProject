@@ -29,6 +29,16 @@
       "gender": "male",
       "password": "shreyash123",
       "confirmPass": "shreyash123"
+    },
+    {
+      "id": "e7f9",
+      "name": "Shraddha",
+      "pan": "FGFDF4565G",
+      "email": "shraddha@gmail.com",
+      "mob": "6787978979",
+      "gender": "female",
+      "password": "shraddha",
+      "confirmPass": "shraddha"
     }
   ],
   "owner": [
@@ -87,7 +97,8 @@
       "city": "pune",
       "hotelMenu": "veg",
       "roomAvailable": "4",
-      "userPass": "bhagyashri"
+      "userPass": "bhagyashri",
+      "imageField": "assets/images/hotel15.jpeg"
     },
     {
       "id": "30aa",
@@ -100,7 +111,8 @@
       "city": "kolhapur",
       "hotelMenu": "veg",
       "roomAvailable": "6",
-      "userPass": "akanksha"
+      "userPass": "akanksha",
+      "imageField": "assets/images/hotel14.jpeg"
     },
     {
       "id": "8769",
@@ -113,7 +125,8 @@
       "city": "Belgaon",
       "hotelMenu": "veg",
       "roomAvailable": "3",
-      "userPass": "shraddha@123"
+      "userPass": "shraddha@123",
+      "imageField": "assets/images/hotel13.jpeg"
     },
     {
       "id": "9867",
@@ -126,7 +139,8 @@
       "city": "Belgaon",
       "hotelMenu": "veg",
       "roomAvailable": "4",
-      "userPass": "shraddha"
+      "userPass": "shraddha",
+      "imageField": "assets/images/hotel12.jpeg"
     },
     {
       "id": "4b46",
@@ -139,7 +153,8 @@
       "city": "kolhapur",
       "hotelMenu": "veg, nonveg",
       "roomAvailable": "",
-      "userPass": "shraddha@123"
+      "userPass": "shraddha@123",
+      "imageField": "assets/images/hotel11.jpeg"
     },
     {
       "id": "8069",
@@ -152,9 +167,9 @@
       "city": "Belgaon",
       "hotelMenu": "veg",
       "roomAvailable": "4",
-      "userPass": "shraddha@123"
+      "userPass": "shraddha@123",
+      "imageField": "assets/images/hotel10.jpeg"
     },
-
     {
       "id": "fb26",
       "ownerName": "Akanksha",
@@ -166,7 +181,8 @@
       "city": "Kolhapur",
       "hotelMenu": "veg",
       "roomAvailable": "",
-      "userPass": "akanksha"
+      "userPass": "akanksha",
+      "imageField": "assets/images/hotel9.jpeg"
     },
     {
       "id": "a924",
@@ -179,7 +195,8 @@
       "city": "Kolhapur",
       "hotelMenu": "non veg",
       "roomAvailable": "",
-      "userPass": "nivel123"
+      "userPass": "nivel123",
+      "imageField": "assets/images/hotel8.jpeg"
     },
     {
       "id": "8580",
@@ -192,7 +209,8 @@
       "city": "pune",
       "hotelMenu": "Nonveg",
       "roomAvailable": "3",
-      "userPass": "shraddha@123"
+      "userPass": "shraddha@123",
+      "imageField": "assets/images/hotel7.jpeg"
     },
     {
       "id": "6349",
@@ -205,7 +223,8 @@
       "city": "pune",
       "hotelMenu": "veg",
       "roomAvailable": "5",
-      "userPass": "shraddha@123"
+      "userPass": "shraddha@123",
+      "imageField": "assets/images/hotel6.jpeg"
     },
     {
       "id": "a358",
@@ -218,7 +237,8 @@
       "city": "Belgaon",
       "hotelMenu": "nonveg",
       "roomAvailable": "3",
-      "userPass": "shraddha@123"
+      "userPass": "shraddha@123",
+      "imageField": "assets/images/hotel5.jpeg"
     },
     {
       "id": "8009",
@@ -231,7 +251,8 @@
       "city": "Belgaon",
       "hotelMenu": "veg",
       "roomAvailable": "4",
-      "userPass": "shraddha@123"
+      "userPass": "shraddha@123",
+      "imageField": "assets/images/hotel4.jpeg"
     },
     {
       "id": "79ef",
@@ -244,7 +265,8 @@
       "city": "Belgaon",
       "hotelMenu": "veg",
       "roomAvailable": "4",
-      "userPass": "shraddha@123"
+      "userPass": "shraddha@123",
+      "imageField": "assets/images/hotel3.jpeg"
     },
     {
       "id": "5479",
@@ -257,7 +279,8 @@
       "city": "Bengluru",
       "hotelMenu": "non veg",
       "roomAvailable": "4",
-      "userPass": "shraddha"
+      "userPass": "shraddha",
+      "imageField": "assets/images/hotel1.jpeg"
     },
     {
       "id": "7817",
@@ -270,8 +293,132 @@
       "city": "Kolhapur",
       "hotelMenu": "veg",
       "roomAvailable": "3",
-      "userPass": "shraddha"
+      "userPass": "shraddha",
+      "imageField": "assets/images/hotel2.jpeg"
+    },
+    {
+      "id": "ab06",
+      "ownerName": "Shraddha",
+      "ownerMobile": "6845",
+      "hotelName": "Hotel Smart",
+      "hotelMobile": "98566",
+      "hotelAdderss": "i park",
+      "state": "Maharashtra",
+      "city": "pune",
+      "hotelMenu": "veg",
+      "roomAvailable": "3",
+      "userPass": "shraddha",
+      "imageField": "assets/images/hotelBg.jpg"
     }
   ],
-  "hotelBooking": []
+  "hotelBooking": [
+    {
+      "id": "7c58",
+      "userName": "Shraddha",
+      "adhar": "456563564356",
+      "email": "shraddha@gmail.com",
+      "mob": "9384782198",
+      "checkin": "2024-02-07",
+      "checkout": "2024-03-07",
+      "adult": 3,
+      "child": 4,
+      "amount": 1000
+    },
+    {
+      "id": "e89b",
+      "userName": "Shraddha",
+      "adhar": "643647676766",
+      "email": "shraddha@gmail.com",
+      "mob": "5654676787",
+      "checkin": "2024-02-29",
+      "checkout": "2024-02-07",
+      "adult": 2,
+      "child": 4,
+      "amount": 1000
+    },
+    {
+      "id": "5f0b",
+      "userName": "Akanksha",
+      "adhar": "456667647667",
+      "email": "akanksha@gmail.com",
+      "mob": "3456876857",
+      "checkin": "2024-02-14",
+      "checkout": "2024-02-14",
+      "adult": 4,
+      "child": 2,
+      "amount": 1000
+    },
+    {
+      "id": "5175",
+      "userName": "Shraddha",
+      "adhar": "657654767676",
+      "email": "shraddha@gmail.com",
+      "mob": "8978689678",
+      "checkin": "2024-02-06",
+      "checkout": "2024-02-07",
+      "adult": 3,
+      "child": 2,
+      "amount": 1000
+    },
+    {
+      "id": "f179",
+      "userName": "shraddha",
+      "adhar": "786857856888",
+      "email": "shraddha@gmail.com",
+      "mob": "8657888778",
+      "checkin": "2024-02-14",
+      "checkout": "2024-02-14",
+      "adult": 4,
+      "child": 4,
+      "amount": 1000
+    },
+    {
+      "id": "73be",
+      "userName": "Shraddha",
+      "adhar": "67467547",
+      "email": "shraddha@gmail.com",
+      "mob": "8768765856",
+      "checkin": "2024-02-14",
+      "checkout": "2024-02-17",
+      "adult": 2,
+      "child": 1,
+      "amount": 1000
+    },
+    {
+      "id": "8096",
+      "userName": "bhagyashri",
+      "adhar": "6457647",
+      "email": "bhagyashri",
+      "mob": "687565678",
+      "checkin": "2024-02-08",
+      "checkout": "2024-02-16",
+      "adult": 2,
+      "child": 2,
+      "amount": 1000
+    },
+    {
+      "id": "fa0f",
+      "userName": "shraddha",
+      "adhar": "968968",
+      "email": "sdfadfafd",
+      "mob": "7665746",
+      "checkin": "2024-02-23",
+      "checkout": "2024-02-24",
+      "adult": 2,
+      "child": 1,
+      "amount": 1000
+    },
+    {
+      "id": "1c2e",
+      "userName": "akanksha",
+      "adhar": "968956767857",
+      "email": "akanksha@gmail.com",
+      "mob": "9878567756",
+      "checkin": "2024-02-15",
+      "checkout": "2024-02-15",
+      "adult": 2,
+      "child": 2,
+      "amount": 1000
+    }
+  ]
 }

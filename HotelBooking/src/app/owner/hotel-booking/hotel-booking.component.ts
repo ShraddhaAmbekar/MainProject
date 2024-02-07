@@ -13,7 +13,8 @@ export class HotelBookingComponent {
   hotelRagistrationForm!:FormGroup;
   list:any;
   selectedStatesList: any[] = [];
-  dataById:any
+  dataById:any;
+  imgName: any;
  
   constructor(private formBuilder : FormBuilder,private dataService :DataService, private apiCallService:ApiCallService, private router:Router){}
   
@@ -40,13 +41,15 @@ export class HotelBookingComponent {
       city:[this.dataById? this.dataById?.city:''],
       hotelMenu :[this.dataById? this.dataById?.hotelMenu:'',[Validators.required]],
       roomAvailable :[this.dataById? this.dataById?.roomAvailable:'',[Validators.required]],
-      userPass: [this.dataById? this.dataById?.userPass:'',[Validators.required]]
+      userPass: [this.dataById? this.dataById?.userPass:'',[Validators.required]],
+      imageField:[]
     })
    }
 
-   Submit(formData:any){
+   Submit(){
+ 
     let endpoint:string='hotelDetails';
-    this.apiCallService.postApiCall(endpoint,formData).subscribe(res=>{
+    this.apiCallService.postApiCall(endpoint,this.hotelRagistrationForm.value).subscribe(res=>{
       console.log(res);
       this.router.navigateByUrl('/owner/ownerSuccess')
     })
@@ -58,6 +61,15 @@ export class HotelBookingComponent {
     this.router.navigateByUrl('/owner/ownerSuccess')
    }
 
+   uploadImage(event:any){ debugger;
+    
+    const file= event.currentTarget.files[0];
+    console.log(file.name)
+     let imgName:string="assets/images/"+file.name
+    this.hotelRagistrationForm.patchValue({imageField:imgName})
+    console.log(imgName);
+    
+}
    
 
  

@@ -1,8 +1,4 @@
-.background {
-  background-color: rgba(238, 217, 132, 0.822);
-  width: 100%;
-  justify-content: center;
-}
+
 
 .card {
   width: 400px;
@@ -13,22 +9,24 @@
 
 img {
   height: 250px;
+  width:400px;
 }
 
 .container-fluid {
   display: flex;
-  width: 90vw;
+  width: 100vw;
   flex-wrap: wrap;
-  margin: 5% 15%;
+  background-color: rgba(9, 71, 107, 0.938);
+  justify-content: center;
+}
+
+.background {
   background-color: rgba(239, 201, 50, 0.922);
+  width: 92%;
   justify-content: center;
 }
 
 
-img {
-  width: 100%;
-  border-radius: 1rem;
-}
 
 table {
   width: 90%;
@@ -44,7 +42,7 @@ table {
   padding: 0px 2rem;
 }
 
-button {
+.btn {
   width: 50%;
   padding: 5px;
   font-size: 1.25rem;
@@ -52,4 +50,12 @@ button {
   border-radius:1rem;
   background-color: transparent; 
   margin:0 25%;
+  border: 1px solid;
+  
+}
+.btn-cancel{
+  color:white;
+  border:2px solid white;
+  height:30px;
+  width:30px
 }

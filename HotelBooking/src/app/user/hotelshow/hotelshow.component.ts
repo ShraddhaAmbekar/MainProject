@@ -8,22 +8,30 @@ import { ApiCallService } from 'src/app/shared/api-call.service';
 })
 export class HotelshowComponent {
   hotelData: any;
-  endpoint:string = 'hotelDetails';
-  searchText=''
-  constructor(private apiCallService:ApiCallService){}
-  ngOnInit(){
+  endpoint: string = 'hotelDetails';
+  searchText = ''
+  constructor(private apiCallService: ApiCallService){}
+
+  ngOnInit() {
     this.getHotelData()
   }
-  
 
-getHotelData() {
-  this.apiCallService.getApiCall(this.endpoint).subscribe(respo => {
-    this.hotelData = respo;
-    console.log(this.hotelData);
+  getHotelData() {
+    this.apiCallService.getApiCall(this.endpoint).subscribe(respo => {
+      this.hotelData = respo;
+      console.log(this.hotelData);
 
-  })
-}
-reset(){
-  this.hotelData=null
-}
+    })
+  }
+
+  async book(id: any) {
+
+    this.apiCallService.dataById = await this.apiCallService.getApiCall(this.endpoint, id).toPromise();
+    console.log('this.apiCallService.dataById', this.apiCallService.dataById);
+    //async await 
+  }
+
+  reset() {
+    this.hotelData = null
+  }
 }

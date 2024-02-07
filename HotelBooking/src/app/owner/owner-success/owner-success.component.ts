@@ -58,7 +58,7 @@ export class OwnerSuccessComponent {
 
    async edit(id:any){
 
-      this.apiCallService.dataById = await this.apiCallService.getApiCall(this.endpoint, id).toPromise().then()
+      this.apiCallService.dataById = await this.apiCallService.getApiCall(this.endpoint, id).toPromise()
 console.log('this.apiCallService.dataById',this.apiCallService.dataById);
 
         this.router.navigateByUrl('/owner/hotelBooking') //async await 

@@ -31,6 +31,7 @@
         <mat-icon class="eye" *ngIf="showConfirmPassword" (click)="toShowConfirmPassword()">visibility</mat-icon>
         <mat-icon class="eye" *ngIf="!showConfirmPassword" (click)="toShowConfirmPassword()">visibility_off</mat-icon>
         <small class="error" *ngIf="!signUpForm.get('confirmPass')?.valid && signUpForm.get('confirmPass')?.touched" confirmPass>*Confirm Password is required</small>
+        <input type="checkbox"/>Term s& Conditions
         <small class="error" *ngIf="isMatch && signUpForm.get('confirmPass')?.value!=''"> *password and confirm password should be equal</small>
         <button class="btn-signup">Sign Up</button>        
       </form>

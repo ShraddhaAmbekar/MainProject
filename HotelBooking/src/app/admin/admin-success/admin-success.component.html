@@ -1,4 +1,5 @@
 <button (click)=" viewOwners()">View Hotels Data</button>
+<button (click)="viewBookings()">View Booking Data</button>
 
 <div  *ngIf='showHotelData'>
   
@@ -25,6 +26,29 @@
     </tbody>
   </table>
 </div>
+<div *ngIf="showBookingData">
+ 
+ 
+  <table class="table table-bordered text-center">
+    <thead class="headings">
+      <th *ngFor="let headings of bookheaders">
+      {{headings}}</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bookingData of bookingData">
+        <td>{{bookingData.userName}}</td>
+        <td>{{bookingData.adhar}}</td>
+        <td>{{bookingData.email}}</td>
+        <td>{{bookingData.mob}}</td>
+        <td>{{bookingData.checkin}}</td>
+        <td>{{bookingData.checkout}}</td>
+        <td>{{bookingData.adult}}</td> 
+        <td>{{bookingData.child}}</td> 
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 <div  *ngIf='showMsg' class="text-center">
   <h3>No Data Found</h3>
 </div>
